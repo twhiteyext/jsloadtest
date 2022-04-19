@@ -1,0 +1,42 @@
+{
+  "artifactStructure": {
+    "assets": [
+      {
+        "root": "dist/",
+        "pattern": "hydrate/**/*"
+      }
+    ],
+    "features": "sites-config/features.json",
+    "plugins": [
+      {
+        "pluginName": "Generator",
+        "sourceFiles": [
+          {
+            "root": ".internal/deno/src",
+            "pattern": "**/*.{ts,json}"
+          },
+          {
+            "root": "dist/server",
+            "pattern": "**/*.js"
+          }
+        ],
+        "event": "ON_PAGE_GENERATE",
+        "functionName": "Generate"
+      }
+    ]
+  },
+  "dependencies": {
+    "installDepsCmd": "npm install",
+    "requiredFiles": [
+      "package.json",
+      "package-lock.json",
+      ".node-version"
+    ]
+  },
+  "buildArtifacts": {
+    "buildCmd": "npm run prod"
+  },
+  "livePreview": {
+    "serveSetupCmd": ":"
+  }
+}

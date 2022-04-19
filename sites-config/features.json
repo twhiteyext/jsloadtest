@@ -1,0 +1,42 @@
+{
+  "features": [
+    {
+      "name": "loc-hydrated",
+      "streamId": "loc-jstesting",
+      "entityPageSet": {
+        "plugin": {}
+      },
+      "templateType": "JS"
+    }
+  ],
+  "streams": [
+    {
+      "$id": "loc-jstesting",
+      "source": "knowledgeGraph",
+      "destination": "pages",
+      "fields": [
+        "id",
+        "uid",
+        "meta",
+        "name",
+        "address",
+        "mainPhone",
+        "description",
+        "hours",
+        "photoGallery",
+        "slug"
+      ],
+      "filter": {
+        "entityTypes": [
+          "location"
+        ]
+      },
+      "localization": {
+        "locales": [
+          "en"
+        ],
+        "primary": false
+      }
+    }
+  ]
+}

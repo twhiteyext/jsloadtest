@@ -1,0 +1,5 @@
+{
+    "bundlePaths": {
+        "loc-hydrated": ["./loc-hydrated.js"]
+    }
+}

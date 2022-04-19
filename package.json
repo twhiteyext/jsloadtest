@@ -1,0 +1,37 @@
+{
+  "name": "deno_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deno.js",
+  "scripts": {
+    "fmt": "npm run fmt:app && npm run fmt:deno",
+    "fmt:app": "npx prettier -w src toolchain",
+    "fmt:deno": "deno fmt .internal/deno/src",
+    "prod": "npx node --experimental-modules toolchain/index.js --mode production",
+    "dev": "npx node --experimental-modules toolchain/index.js --mode development",
+    "generate": "deno run --allow-read --allow-write .internal/deno/src/mod.ts",
+    "serve": "deno run --allow-read --allow-net .internal/deno/src/serve.ts"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react-dom": "^17.0.11",
+    "clean-webpack-plugin": "^4.0.0",
+    "generate-file-webpack-plugin": "^1.0.1",
+    "glob": "^7.2.0",
+    "handlebars": "^4.7.7",
+    "prettier": "^2.5.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.13",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpackbar": "^5.0.2"
+  },
+  "dependencies": {
+    "command-line-args": "^5.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
