@@ -2,7 +2,7 @@
   "features": [
     {
       "name": "loc-hydrated",
-      "streamId": "loc-jstesting-2",
+      "streamId": "loc-jstesting-3",
       "entityPageSet": {
         "plugin": {}
       },
@@ -11,7 +11,7 @@
   ],
   "streams": [
     {
-      "$id": "loc-jstesting-2",
+      "$id": "loc-jstesting-3",
       "source": "knowledgeGraph",
       "destination": "pages",
       "fields": [
